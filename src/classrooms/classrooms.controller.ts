@@ -8,8 +8,8 @@ export class ClassroomsController {
   constructor(private readonly classroomsService: ClassroomsService) { }
 
   @Get()
-  getAll(): string {
-    return "hehe"
+  getAll(): Promise<Classroom[]> {
+    return this.classroomsService.getAll()
   }
 
   @Get(':id')

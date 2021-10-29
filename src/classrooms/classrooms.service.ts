@@ -7,9 +7,9 @@ import { InjectModel } from '@nestjs/mongoose'
 export class ClassroomsService {
   constructor(@InjectModel('Classroom') private readonly classroomModel: Model<Classroom>) { }
 
-  // async getAll():Promise<Classroom[]> {
-  //   return await this.classroomModel
-  // }
+  async getAll(): Promise<Classroom[]> {
+    return await this.classroomModel.find().exec()
+  }
 
   async getOneById(id: string): Promise<Classroom> {
     return await this.classroomModel.findOne({ _id: id })
