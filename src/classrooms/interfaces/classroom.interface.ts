@@ -1,6 +1,7 @@
 export interface Classroom {
   id?: string,
   name: string,
+  subject: string,
   description: string,
   banner: string,
   themeColor: string,

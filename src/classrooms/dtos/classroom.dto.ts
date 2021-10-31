@@ -1,5 +1,6 @@
 export class ClassroomDTO {
   readonly name: string
+  readonly subject: string
   readonly description: string
   readonly banner: string
   readonly themeColor: string

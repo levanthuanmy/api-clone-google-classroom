@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common'
 import { Classroom } from './interfaces/classroom.interface'
 import { Model } from 'mongoose'
 import { InjectModel } from '@nestjs/mongoose'
+import { themeColors } from 'src/config/default'
 
 @Injectable()
 export class ClassroomsService {
@@ -17,6 +18,10 @@ export class ClassroomsService {
 
   async create(classroom: Classroom): Promise<Classroom> {
     const newClass = new this.classroomModel(classroom)
+    if (!newClass.themeColor?.length) {
+      const random = Math.floor(Math.random() * themeColors.length)
+      newClass['themeColor'] = themeColors[random]
+    }
     return await newClass.save()
   }
 

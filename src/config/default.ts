@@ -1,0 +1,1 @@
+export const themeColors: string[] = ['#6D9886', '#D9CAB3', '#506D84', '#86340A', '#CC9B6D', '#91091E']
