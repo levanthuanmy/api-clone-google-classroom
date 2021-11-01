@@ -12,4 +12,5 @@ export const ClassroomSchema = new mongoose.Schema({
   students: Array,
   teachers: Array,
   host: Object,
+  room: String,
 })

@@ -9,4 +9,5 @@ export class ClassroomDTO {
   readonly students: any[]
   readonly teachers: any[]
   readonly host: object
+  readonly room: string
 }

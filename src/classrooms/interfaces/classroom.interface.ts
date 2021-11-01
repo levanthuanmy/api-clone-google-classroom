@@ -10,4 +10,5 @@ export interface Classroom {
   students: any[],
   teachers: any[],
   host: object,
+  room: string
 }
